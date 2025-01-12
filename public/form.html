@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogForm</title>
+  </head>
+  <body>
+    <h2>ブログフォーム</h2>
+    <form action="../classes/blog_create.php" method="post">
+      <p>ブログタイトル：</p>
+      <input type="text" name="title" />
+      <p>ブログ本文：</p>
+      <textarea
+        name="content"
+        id="content"
+        cols="30"
+        rows="10"
+        style="display: block"
+      ></textarea>
+      <p>カテゴリ：</p>
+      <select name="category">
+        <option value="1">日常</option>
+        <option value="2">プログラミング</option>
+      </select>
+      <label for="publish">
+        <input
+          type="radio"
+          name="publish_status"
+          value="1"
+          id="publish"
+          checked
+        />公開
+      </label>
+      <label for="un_publish">
+        <input
+          type="radio"
+          name="publish_status"
+          value="2"
+          id="un_publish"
+        />非公開
+      </label>
+      <input type="submit" value="送信" style="display: block" />
+    </form>
+    <p><a href="./index.php">home</a></p>
+  </body>
+</html>
